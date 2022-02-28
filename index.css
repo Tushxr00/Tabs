@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+ :root {
+    --first-font: 'Josefin Sans', sans-serif;
+    --white: #ffffff;
+    --black: #000000;
+    --light: #42cbf8;
+    --peach: #FFE5B4;
+    --red: rgb(199, 14, 14);
+    --grey: rgb(122, 120, 120);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--first-font);
+    background-color: var(--peach);
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.title p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60vw;
+}
+
+.title h2 {
+    text-transform: capitalize;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.center {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    width: 75vw;
+    background-color: rgb(199, 195, 195);
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: var(--grey) 5px 5px 10px, var(--grey) -5px -5px 10px;
+}
+
+.about-img {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+img {
+    border-radius: 1rem;
+    object-fit: cover;
+    height: 21rem;
+    width: 39vw;
+    margin-right: 1rem;
+}
+
+.about {
+    width: 39vw;
+    margin-left: 1rem;
+    background-color: var(--white);
+    border-radius: 1rem;
+}
+
+.btn-container {
+    display: flex;
+    height: 2rem;
+}
+
+.tab-btn {
+    flex: 1;
+    background-color: transparent;
+    text-transform: capitalize;
+    border: none;
+    font-size: 1.3rem;
+}
+
+.tab-btn:not(.active) {
+    background-color: transparent;
+    /* transition: 1s; */
+    background-color: rgb(199, 195, 195);
+}
+
+.tab-btn:hover {
+    background-color: var(--white);
+    color: var(--light);
+    transition: 0.5s;
+}
+
+.tab-btn:nth-child(1) {
+    border-top-left-radius: 0.7rem;
+}
+
+.tab-btn:nth-child(3) {
+    border-top-right-radius: 0.7rem;
+}
+
+.about-content {
+    padding: 2rem;
+}
+
+h4 {
+    text-transform: capitalize;
+    padding-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.content {
+    display: none;
+}
+
+.content.active {
+    display: block;
+}
+
+@media screen and (max-width:1000px) {
+    .center {
+        flex-direction: column;
+    }
+    img {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        width: 66vw;
+    }
+    .about {
+        margin-left: auto;
+        margin-right: auto;
+        align-self: center;
+        width: auto;
+    }
+}
+
+@media screen and (max-width:800px) {
+    img {
+        height: 40vh;
+    }
+    .tab-btn {
+        font-size: 1rem;
+    }
+}
